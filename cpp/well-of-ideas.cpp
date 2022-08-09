@@ -1,18 +1,24 @@
+// Codewars Kata: Well of Ideas - Harder Version
+// https://www.codewars.com/kata/57f22b0f1b5432ff09001cab/solutions/cpp
 #include <iostream>
 #include <vector>
 #include <string>
 
-std::string well(const std::vector<std::string>& arr) {
+std::string well(const std::vector<std::vector<std::string>>& arr) {
     
     std::vector<std::string> n;
 
-    for (int i = 0; i < arr.size(); i++) {
-        std::string word = "";
-        for (int j = 0; j < arr[i].size(); j++) {
-            word += tolower(arr[i][j]);
-        }
+    for (int h = 0; h < arr.size(); h++) {
+     
+        for (int i = 0; i < arr[h].size(); i++) {
+            std::string word = "";
         
-        n.push_back(word);
+            for (int j = 0; j < arr[h][i].size(); j++) {
+                word += tolower(arr[h][i][j]);
+            }
+            
+            n.push_back(word);
+        }
     }
 
     int good = 0;
@@ -37,7 +43,9 @@ std::string well(const std::vector<std::string>& arr) {
 }
 
 int main() {
-    std::vector<std::string> arr = {"gOOd", "bAd", "BAD", "bad", "bad", "GOOD"};
+    std::vector<std::vector<std::string>> arr = {{"gOOd", "bAd", "BAD", "bad", "bad"},
+                                                {"bad","bAd", "bad"},
+                                                {"GOOD", "bad", "bad", "bAd"}};
     std::cout << well(arr);
     return 0;
 }
