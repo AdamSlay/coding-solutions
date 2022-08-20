@@ -9,18 +9,18 @@
 void solve()
 {
     int n, k; std::cin >> n >> k;
-    std::string bin; std::cin >> bin;
+    std::string s; std::cin >> s;
     for (int i = 0; i < (n-k+1); i++)
     {
-        if (bin[i] == '1')
+        if (s[i] == '1')
         {
             for (int j = 0; j < k; j++)
             {
-                bin[i+j] == '1' ? bin[i+j] = '0': bin[i+j] = '1';
+                s[i+j] == '1' ? s[i+j] = '0': s[i+j] = '1';
             }
         }
     }
-    std::cout << bin << "\n";
+    std::cout << s << "\n";
 }
 
 int main()
