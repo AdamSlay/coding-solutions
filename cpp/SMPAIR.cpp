@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 void solve()
 {
     std::vector<int> a;
