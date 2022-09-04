@@ -1,6 +1,8 @@
+// Code Chef: Smallest Pair - Practice Problem
+
 #include <iostream>
 #include <vector>
-#include <algorithm>
+
 void solve()
 {
     std::vector<int> a;
